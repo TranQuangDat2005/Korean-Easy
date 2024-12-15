@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Learning</title>
+    <link rel="stylesheet" href="./CSS_FOLDER/style_newWord.css">
+
+</head>
+
+<body>
+    <div class="Header">
+        <h1 class="hearer-title">
+            <p id="title-first">KOREAN &nbsp;</p>
+            <p id="title-last">EASY</p>
+        </h1>
+        <img class="header-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png"
+            alt="flag korean">
+        <div class="header-search_box">
+            <input type="search" id="search-box" placeholder="Tìm kiếm hoặc dịch nghĩa của từ...">
+            <button onclick="Finding()">Tìm</button>
+        </div>
+    </div>
+
+    <div class="Service">
+        <div class="Service-menu">
+            <ul>
+                <h1>Lựa chọn nhanh</h1>
+                <li><a href="./index.html">TRANG CHỦ</a></li>
+                <li><a href="./alphabet.html">HỌC BẢNG CHỮ CÁI</a></li>
+                <li><a href="./Learning_newWord.html">HỌC TỪ MỚI</a></li>
+                <li><a href="./Reading.html">LUYỆN ĐỌC-HIỂU</a></li>
+                <li><a href="./Listening.html">LUYỆN NGHE</a></li>
+                <li><a href="" onclick="getFile()">LẤY TÀI LIỆU TXT</a></li>
+            </ul>
+            <div>
+                <p>CHỌN NGÔN NGỮ TẠI ĐÂY</p>
+                <select style="margin: 10px 0; width: 100%;" name="Choosing_Language" id="Choosing_Language">
+                    <option value="en-US" class="language">English</option>
+                    <option value="ko-KR" class="language">Korean</option>
+                    <option value="ja-JP" class="language">Japanese</option>
+                    <option value="zh-CN" class="language">Chinese</option>
+                </select>
+                
+                <div>
+                    <p style="margin-bottom: 10px;">CÀI ĐẶT TỐC ĐỘ NÓI VÀ TỪ</p>
+                    <input type="number" id="speedInput" min="0.1" max="10" value="1">
+                </div>
+
+                <select style="margin-bottom: 30px 0; width: 100%;" name="Choosing_speak" id="Choosing_speak">
+                    <option value="Word" class="type-speak">Thuật ngữ</option>
+                    <option value="Meaning" class="type-speak">Định nghĩa</option>
+                </select>
+
+            </div>
+        </div>
+
+
+
+        <div class="Quiz">
+            <!-- Upload file -->
+            <div class="Quiz-upload">
+                <p>Upload file txt chứa từ mới vào đây!</p>
+                <br>
+                <input title="File từ mới phải có dạng [thuật ngữ,định nghĩa]" type="file" id="file-upload" onchange="reloadPage(),ReadFile()" required />
+            </div>
+            <p id="Note">Nhớ chọn bắt đầu và ấn xác nhận sau khi chọn file/ nếu muốn skip hoặc bị gặp underfined khi đã
+                thêm file thì ấn thêm một lần xác nhận</p>
+            <!-- Choose learning mode -->
+            <div class="Choose-learning-mode">
+                <p>Chọn chế độ học</p>
+                <select name="Select-mode" id="Select-mode">
+                    <option value="Start">Bắt đầu</option>
+                    <!-- Ôn  -->
+                    <option value="Learning">Ôn tập từ vựng</option>
+                    <!-- Học ~ viết -->
+                    <option value="Writing">Kiểm tra viết</option>
+                    <!-- Học ~ trắc nghiệm -->
+                    <option value="Multiple-choice">Kiểm tra trắc nghiệm</option>
+                    <!-- MIX -->
+                    <option value="Mix-test">Mix Test</option>
+                </select>
+                <br>
+                <button onclick="ChooseMode()">Xác nhận</button>
+            </div>
+            <button title="Phải chọn đúng ngôn ngữ thì đọc từ mới hoạt động" style="display: none;" class="speaker" onclick="clickForSpeak()">đọc từ</button>
+            <!-- display word -->
+            <p style="display: none;" id="display_word" onclick="Translate()">Word will appear here</p>
+
+            <div style="display: none;" class="Learning">
+                <button onclick="traversalprevListWord()">Từ phía trước</button>
+                <button onclick="traversalnextListWord()">Từ tiếp theo</button>
+            </div>
+
+            <div style="display: none;" class="Writing">
+                <div class="writing-answer">
+                    <input id="writing-answer_input" type="text" placeholder="Điền vào đây...">
+                    <button onclick="submit()">Nộp</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="display: none;" class="Multiple-choice">
+            <div class="First-line">
+                <button id="answer-one" onclick="check_answer(this)">A</button>
+                <button id="answer-two" onclick="check_answer(this)">B</button>
+            </div>
+            <div class="Second-line">
+                <button id="answer-three" onclick="check_answer(this)">C</button>
+                <button id="answer-four" onclick="check_answer(this)">D</button>
+            </div>
+
+        </div>
+
+        <div style="display: none;" class="Mix-test">
+
+        </div>
+
+    </div>
+    </div>
+    <div class="footer-content">
+        <p>Email: datquangtran05@gmail.com</p>
+        <a href="https://www.facebook.com/profile.php?id=100073761786683">Facebook</a>
+        <h5>@Copyright 2024.TranQuangDat</h5>
+    </div>
+    <script src="JVS_FOLDER/JavaScriptforNewWord.js"></script>
+</body>
+
+</html>

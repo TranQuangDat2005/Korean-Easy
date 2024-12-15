@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Learning</title>
+    <link rel="stylesheet" href="./CSS_FOLDER/style_alphabet.css">
+
+</head>
+
+<body>
+    <div class="Header">
+        <h1 class="hearer-title">
+            <p id="title-first">KOREAN &nbsp;</p>
+            <p id="title-last">EASY</p>
+        </h1>
+        <img class="header-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png"
+            alt="flag korean">
+        <div class="header-search_box">
+            <input type="search" id="search-box" placeholder="Tìm kiếm hoặc dịch nghĩa của từ...">
+            <button onclick="Finding()">Tìm</button>
+        </div>
+    </div>
+
+    <div class="Service">
+        <div class="Service-menu">
+            <ul>
+                <h1>Lựa chọn nhanh</h1>
+                <li><a href="./index.html">TRANG CHỦ</a></li>
+                <li><a href="./alphabet.html">HỌC BẢNG CHỮ CÁI</a></li>
+                <li><a href="./Learning_newWord.html">HỌC TỪ MỚI</a></li>
+                <li><a href="./Reading.html">LUYỆN ĐỌC-HIỂU</a></li>
+                <li><a href="./Listening.html">LUYỆN NGHE</a></li>
+                <li><a href="" onclick="getFile()">LẤY TÀI LIỆU TXT</a></li>
+            </ul>
+        </div>
+        <div class="alphabet-content">
+            <h1>HỌC BẢNG CHỮ CÁI TIẾNG HÀN</h1>
+            <div class="alphabet-display_button">
+                <button onclick="ChangeType('hidden')">Ẩn bảng chữ cái</button>
+                <button onclick="ChangeType('display')">Hiện bảng chữ cái</button>
+            </div>
+            <div class="alphabet-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phụ âm (자음)</th>
+                            <th>Nguyên âm (모음)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ㄱ [k/g]</td>
+                            <td>ㅏ [a]</td>
+                        </tr>
+                        <tr>
+                            <td>ㄴ [n]</td>
+                            <td>ㅑ [ya]</td>
+                        </tr>
+                        <tr>
+                            <td>ㄷ [t/d]</td>
+                            <td>ㅓ [o]</td>
+                        </tr>
+                        <tr>
+                            <td>ㄹ [r/l]</td>
+                            <td>ㅕ [yo]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅁ [mo]</td>
+                            <td>ㅗ [ô]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅂ [b]</td>
+                            <td>ㅛ [yô]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅅ [s/x]</td>
+                            <td>ㅜ [u]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅇ [ /ng]</td>
+                            <td>ㅠ [yu]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅈ [ch]</td>
+                            <td>ㅡ [ư]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅊ [ch']</td>
+                            <td>ㅣ [i]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅋ [kh']</td>
+                            <td>ㅐ [e]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅌ [th']</td>
+                            <td>ㅒ [ye]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅍ [ph']</td>
+                            <td>ㅔ [ê]</td>
+                        </tr>
+                        <tr>
+                            <td>ㅎ [hờ']</td>
+                            <td>ㅖ [yê]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅘ [oa]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅙ [ue]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅚ [oê]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅝ [uo]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅞ [uê]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅟ [ui]</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>ㅢ [ưi]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="display: none;" class="Random-letter">
+                <h2 style="text-align: center; margin-top: 20px;">Nguyên Âm và Phụ Âm</h2>
+                <p style="text-align: center; margin-top: 20px;">Ấn vào nút "nộp" để nộp/ random một nguyên âm hoặc một
+                    phụ âm, bạn hãy ghi phiên âm của nó vào text box để học thuộc
+                    <select class="select-type" name="select-type">
+                        <option value="jungSeong">Nguyên Âm</option>
+                        <option value="choSeong">Phụ Âm</option>
+                    </select>
+                <div style="text-align: center; font-size: 300px;" class="Letter-show"></div>
+                <div class="answer-form">
+                    <input type="text" id="answer-random" placeholder="Điền đáp án vào đây...">
+                    <button type="button" id="submit-button" onclick="submit()"> nộp </button>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer-content">
+        <p>Email: datquangtran05@gmail.com</p>
+        <a href="https://www.facebook.com/profile.php?id=100073761786683">Facebook</a>
+        <h5>@Copyright 2024.TranQuangDat</h5>
+    </div>
+    <script src="JVS_FOLDER/myJavaScript.js"></script>
+</body>
+
+</html>
