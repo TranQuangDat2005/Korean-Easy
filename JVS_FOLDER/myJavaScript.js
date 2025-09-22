@@ -117,3 +117,15 @@ function submit() {
     }
     document.getElementById("answer-random").value = "";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("answer-random");
+    if (input) {
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // tránh reload form
+                submit();
+            }
+        });
+    }
+});
