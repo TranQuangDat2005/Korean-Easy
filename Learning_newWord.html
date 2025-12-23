@@ -43,7 +43,7 @@
                     <option value="ja-JP" class="language">Japanese</option>
                     <option value="zh-CN" class="language">Chinese</option>
                 </select>
-                
+
                 <div>
                     <p style="margin-bottom: 10px;">CÀI ĐẶT TỐC ĐỘ NÓI VÀ TỪ</p>
                     <input type="number" id="speedInput" min="0.1" max="10" value="1">
@@ -64,7 +64,8 @@
             <div class="Quiz-upload">
                 <p>Upload file txt chứa từ mới vào đây!</p>
                 <br>
-                <input title="File từ mới phải có dạng [thuật ngữ,định nghĩa]" type="file" id="file-upload" onchange="reloadPage(),ReadFile()" required />
+                <input title="File từ mới phải có dạng [thuật ngữ,định nghĩa]" type="file" id="file-upload"
+                    onchange="reloadPage(),ReadFile()" required />
             </div>
             <p id="Note">Nhớ chọn bắt đầu và ấn xác nhận sau khi chọn file/ nếu muốn skip hoặc bị gặp underfined khi đã
                 thêm file thì ấn thêm một lần xác nhận</p>
@@ -85,7 +86,8 @@
                 <br>
                 <button onclick="ChooseMode()">Xác nhận</button>
             </div>
-            <button title="Phải chọn đúng ngôn ngữ thì đọc từ mới hoạt động" style="display: none;" class="speaker" onclick="clickForSpeak()">đọc từ</button>
+            <button title="Phải chọn đúng ngôn ngữ thì đọc từ mới hoạt động" style="display: none;" class="speaker"
+                onclick="clickForSpeak()">đọc từ</button>
             <!-- display word -->
             <p style="display: none;" id="display_word" onclick="Translate()">Word will appear here</p>
 

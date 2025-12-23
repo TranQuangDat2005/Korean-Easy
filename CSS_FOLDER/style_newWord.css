@@ -142,7 +142,7 @@ body {
     background-color: rgb(127, 231, 127);
 }
 
-#Choosing_speak{
+#Choosing_speak {
     margin-top: 15px;
     width: 100%;
     background-color: #304f56;
@@ -266,6 +266,7 @@ body {
     color: #eb0e0e;
 }
 
+/* Preserve Original Desktop Styles */
 .Multiple-choice {
     flex-direction: column;
     gap: 10px;
@@ -309,25 +310,139 @@ body {
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-    /* start header */
-     .Header{
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         gap: 10px;
-     }
-     .hearer-title{
-         font-size: 18px;
-     }
-     .header-logo{
-         width: 60px;
-         height: 40px;
-     }
-     .header-search_box{
-         width: 300px;
-         justify-content: center;
-     }
- 
-     /* end header */
- }
+@media (max-width: 768px) {
+
+    /* Header */
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .hearer-title {
+        font-size: 18px;
+    }
+
+    .header-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .header-search_box {
+        width: 90%;
+        scale: 1;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header-search_box input {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    /* Service Layout Reset */
+    .Service {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Service-menu {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .Service-menu ul {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Quiz Area Reset */
+    .Quiz {
+        margin-bottom: 50px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Quiz-upload {
+        box-sizing: border-box;
+        height: auto;
+        padding: 15px;
+    }
+
+    .Quiz-upload input {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .Choose-learning-mode {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #display_word {
+        margin: 20px 0;
+        width: 100%;
+        height: 80px;
+        font-size: 24px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Learning controls */
+    .Learning {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Learning button {
+        margin: 0;
+        width: 45%;
+        min-width: 120px;
+    }
+
+    /* Writing mode */
+    .writing-answer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .writing-answer input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .writing-answer button {
+        width: 100px;
+        height: 40px;
+    }
+
+    /* FIXED Multiple Choice Mobile */
+    .Multiple-choice {
+        width: 100%;
+        margin-left: 0;
+        /* Reset the 115% margin */
+        display: flex;
+        align-items: center;
+    }
+
+    .First-line,
+    .Second-line {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .Multiple-choice button {
+        width: 100%;
+        height: 50px;
+    }
+}

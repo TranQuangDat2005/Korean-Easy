@@ -197,25 +197,126 @@ th {
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-    /* start header */
-     .Header{
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         gap: 10px;
-     }
-     .hearer-title{
-         font-size: 18px;
-     }
-     .header-logo{
-         width: 60px;
-         height: 40px;
-     }
-     .header-search_box{
-         width: 300px;
-         justify-content: center;
-     }
- 
-     /* end header */
- }
+/* Coming Soon Text */
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 80px;
+    color: rgb(58, 58, 58);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    /* Coming Soon Mobile */
+    .coming-soon {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    /* Header */
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .hearer-title {
+        font-size: 18px;
+    }
+
+    .header-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .header-search_box {
+        width: 90%;
+        scale: 1;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header-search_box input {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    /* Service Layout */
+    .Service {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Service-menu {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .Service-menu ul {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Alphabet Content */
+    .alphabet-table table {
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .alphabet-table {
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .alphabet-display_button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alphabet-content button {
+        width: 100%;
+        max-width: 250px;
+        height: 40px;
+        /* Larger touch target */
+    }
+
+    .Letter-show {
+        font-size: 150px !important;
+        /* Smaller letter on mobile */
+    }
+
+    .answer-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #answer-random {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    #submit-button {
+        margin-left: 0;
+        width: 100px;
+        height: 40px;
+    }
+
+    /* Footer */
+    .footer-content {
+        height: auto;
+        padding: 20px 10px;
+    }
+}

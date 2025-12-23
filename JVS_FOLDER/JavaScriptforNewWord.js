@@ -315,10 +315,10 @@ function clickForSpeak() {
     let Choosing_speak_value = Set_Choosing_speak_value();
     let word = arr[count];
     let meaning = hashmap.get(word);
-    if (Choosing_speak_value == "Word"&&hashmap.has(word)){
+    if (Choosing_speak_value == "Word" && hashmap.has(word)) {
         speakText(word);
     }
-    if (Choosing_speak_value == "Meaning"){
+    if (Choosing_speak_value == "Meaning") {
         speakText(meaning);
     }
 }

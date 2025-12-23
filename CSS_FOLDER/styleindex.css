@@ -139,25 +139,72 @@ body {
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-   /* start header */
-    .Header{
-        display: flex;
+@media (max-width: 768px) {
+    /* Header */
+    .Header {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
+        padding: 15px 0;
     }
-    .hearer-title{
+
+    .hearer-title {
         font-size: 18px;
     }
-    .header-logo{
-        width: 60px;
-        height: 40px;
+
+    .header-logo {
+        width: 80px;
+        height: auto;
     }
-    .header-search_box{
-        width: 300px;
+
+    .header-search_box {
+        width: 90%;
+        scale: 1;
+        flex-direction: row;
         justify-content: center;
     }
 
-    /* end header */
+    .header-search_box input {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    /* Service Layout */
+    .Service {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .Service-menu {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box; 
+    }
+    
+    .Service-menu ul {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Topik Content */
+    .Topik-description {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .Topik-table, .Topik-description table {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Footer */
+    .footer-content {
+        height: auto;
+        padding: 20px 10px;
+    }
 }
