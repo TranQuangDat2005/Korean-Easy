@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Learning</title>
+    <link rel="stylesheet" href="CSS_FOLDER/styleindex.css">
+
+</head>
+
+<body>
+    <div class="Header">
+        <h1 class="hearer-title">
+            <p id="title-first">KOREAN &nbsp;</p>
+            <p id="title-last">EASY</p>
+        </h1>
+        <img class="header-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png"
+            alt="flag korean">
+        <div class="header-search_box">
+            <input type="search" id="search-box" placeholder="Tìm kiếm hoặc dịch nghĩa của từ...">
+            <button onclick="Finding()">Tìm</button>
+        </div>
+    </div>
+
+    <div class="Service">
+        <div class="Service-menu">
+            <ul>
+                <h1>Lựa chọn nhanh</h1>
+                <li><a href="./index.html">TRANG CHỦ</a></li>
+                <li><a href="./alphabet.html">HỌC BẢNG CHỮ CÁI</a></li>
+                <li><a href="./Learning_newWord.html">HỌC TỪ MỚI</a></li>
+                <li><a href="./Reading.html">LUYỆN ĐỌC-HIỂU</a></li>
+                <li><a href="./Listening.html">LUYỆN NGHE</a></li>
+                <li><a href="" onclick="getFile()">LẤY TÀI LIỆU TXT</a></li>
+            </ul>
+        </div>
+        <div class="Topik-description">
+            <h1>TOPIK</h1>
+            <p class="Topik-mean">TOPIK (viết tắt của Test of Proficiency in Korean, Hangul: 한국어능력시험, Hanja: 韓國語能力試驗) là
+                bài thi đánh giá
+                năng lực tiếng Hàn do Viện giáo dục quốc tế Quốc gia Hàn Quốc (국립국제교육원, National Institute for
+                International Education, viết tắt: NIIED) tổ chức hàng năm.
+            </p>
+            <br>
+            <p class="Topik-info">
+            <h2>Trình độ và cấu trúc bài thi TOPIK</h2>
+            <h3>1. Trình độ và tiêu chí đánh giá</h3>
+            <table class="Topik-table" border="1" cellpadding="10" style="border-collapse:collapse; width:100%;">
+                <thead>
+                    <tr>
+                        <th>Trình độ</th>
+                        <th>Khung CEFR</th>
+                        <th>Điểm đỗ</th>
+                        <th>Tiêu chí đánh giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TOPIK I - 1</td>
+                        <td>A1</td>
+                        <td>Trên 80 điểm</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>Thực hiện các cuộc hội thoại cơ bản liên quan đến kỹ năng sống hàng ngày.</li>
+                                <li>Tạo các câu đơn giản dựa trên khoảng 800 mục từ vựng và ngữ pháp cơ bản.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TOPIK I - 2</td>
+                        <td>A2</td>
+                        <td>Trên 140 điểm</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>Thực hiện các cuộc trò chuyện đơn giản liên quan đến thói quen hàng ngày.</li>
+                                <li>Sử dụng khoảng 1.500-2.000 từ vựng và các diễn đạt phù hợp với tình huống.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TOPIK II - 3</td>
+                        <td>B1</td>
+                        <td>Trên 120 điểm</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>Thực hiện các chức năng ngôn ngữ cơ bản trong cuộc sống thường ngày.</li>
+                                <li>Hiểu và sử dụng ngôn ngữ viết và nói ở mức độ xã hội quen thuộc.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TOPIK II - 4</td>
+                        <td>B2</td>
+                        <td>Trên 150 điểm</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>Thực hiện ngôn ngữ xã hội và công việc thông thường.</li>
+                                <li>Hiểu các chủ đề xã hội và trừu tượng với độ chính xác cao.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TOPIK II - 5</td>
+                        <td>C1</td>
+                        <td>Trên 190 điểm</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>Sử dụng ngôn ngữ chuyên môn trong công việc và nghiên cứu.</li>
+                                <li>Hiểu và diễn đạt các chủ đề chính trị, kinh tế, xã hội.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TOPIK II - 6</td>
+                        <td>C2</td>
+                        <td>Trên 230 điểm</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>Thực hiện ngôn ngữ chuyên nghiệp một cách chuẩn xác và lưu loát.</li>
+                                <li>Không gặp khó khăn khi truyền đạt ý nghĩa, gần tương đương người bản ngữ.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h3>2. Cấu trúc bài thi</h3>
+            <table border="1" cellpadding="10" style="border-collapse:collapse; width:100%;">
+                <thead>
+                    <tr>
+                        <th>Phần thi</th>
+                        <th>TOPIK I</th>
+                        <th>TOPIK II</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phần Nghe</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>30 câu / 40 phút</li>
+                                <li>Nội dung: Nghe hội thoại đoán chủ đề, đoán câu tiếp theo, đoán tranh.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>50 câu / 60 phút</li>
+                                <li>Nội dung: Nghe hội thoại đoán tranh, biểu đồ, câu tiếp theo, chủ đề, trả lời câu
+                                    hỏi.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phần Viết</td>
+                        <td>Không có</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>4 câu / 50 phút</li>
+                                <li>Nội dung: Điền vào chỗ trống, mô tả biểu đồ, viết tiểu luận.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phần Đọc hiểu</td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>40 câu / 60 phút</li>
+                                <li>Nội dung: Tìm chủ đề, chọn từ, đoán nội dung tranh, trả lời câu hỏi.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="Topik-list">
+                                <li>50 câu / 70 phút</li>
+                                <li>Nội dung: Từ vựng, biểu đồ, sắp xếp câu, đọc đoạn văn, tiêu đề báo, văn học.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </p>
+    </div>
+    </div>
+
+    <div class="footer-content">
+        <p>Email: datquangtran05@gmail.com</p>
+        <a href="https://www.facebook.com/profile.php?id=100073761786683">Facebook</a>
+        <h5>@Copyright 2024.TranQuangDat</h5>
+    </div>
+    <script src="JVS_FOLDER/myJavaScript.js"></script>
+</body>
+
+
+</html>
+

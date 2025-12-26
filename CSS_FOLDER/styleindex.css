@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+/* header */
+.Header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(145, 195, 233);
+    padding: 20px 0;
+}
+
+.hearer-title {
+    display: flex;
+    align-items: center;
+}
+
+#title-first {
+    color: blue;
+}
+
+#title-last {
+    color: red;
+}
+
+.header-logo {
+    width: 150px;
+    height: 80px;
+    border: 1px none;
+    border-radius: 50%;
+}
+
+.header-search_box {
+    display: flex;
+    scale: 120%;
+    align-items: center;
+}
+
+.header-search_box input {
+    border-style: none;
+    margin-right: 4px;
+    height: 20px;
+    width: 250px;
+}
+
+.header-search_box input:focus {
+    outline-width: 0;
+}
+
+.header-search_box button {
+    border-style: none;
+    margin-right: 4px;
+    height: 20px;
+    width: 70px;
+    background-color: rgb(0, 98, 255);
+    color: white;
+}
+
+.header-search_box button:hover {
+    background-color: rgb(67, 133, 233);
+    color: white;
+}
+
+/* Service */
+.Service {
+    margin: 40px 80px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+}
+
+.Service-menu {
+    background-color: aliceblue;
+    width: 230px;
+    height: 250px;
+    border: 1px double gray;
+    border-radius: 20px;
+    box-shadow: 1px 3px 12px gray
+}
+
+.Service-menu ul {
+    list-style-type: none;
+    line-height: 30px;
+    padding: 20px 0px 20px 45px;
+}
+
+.Service-menu a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.Service-menu a:hover {
+    color: #eb0e0e;
+}
+
+.Service-menu h1 {
+    font-size: 20px;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.Topik-description {
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px 12px gray
+}
+
+.Topik-mean {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Topik-list {
+    list-style: none;
+}
+
+/* footer */
+.footer-content {
+    background-color: rgb(70, 100, 123);
+    height: 100px;
+    text-align: center;
+    line-height: 25px;
+    padding-top: 10px;
+    color: white;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .hearer-title {
+        font-size: 18px;
+    }
+
+    .header-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .header-search_box {
+        width: 90%;
+        scale: 1;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header-search_box input {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    /* Service Layout */
+    .Service {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .Service-menu {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box; 
+    }
+    
+    .Service-menu ul {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Topik Content */
+    .Topik-description {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .Topik-table, .Topik-description table {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Footer */
+    .footer-content {
+        height: auto;
+        padding: 20px 10px;
+    }
+}

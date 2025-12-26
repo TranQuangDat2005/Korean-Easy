@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+/* header */
+.Header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(145, 195, 233);
+    padding: 20px 0;
+}
+
+.hearer-title {
+    display: flex;
+    align-items: center;
+}
+
+#title-first {
+    color: blue;
+}
+
+#title-last {
+    color: red;
+}
+
+.header-logo {
+    width: 150px;
+    height: 80px;
+    border: 1px none;
+    border-radius: 50%;
+}
+
+.header-search_box {
+    display: flex;
+    scale: 120%;
+    align-items: center;
+}
+
+.header-search_box input {
+    border-style: none;
+    margin-right: 4px;
+    height: 20px;
+    width: 250px;
+}
+
+.header-search_box input:focus {
+    outline-width: 0;
+}
+
+.header-search_box button {
+    border-style: none;
+    margin-right: 4px;
+    height: 20px;
+    width: 70px;
+    background-color: rgb(0, 98, 255);
+    color: white;
+}
+
+.header-search_box button:hover {
+    background-color: rgb(67, 133, 233);
+    color: white;
+}
+
+/* Service */
+.Service {
+    margin: 40px 80px;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.Service-menu h1 {
+    font-size: 20px;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+
+.Service-menu {
+    background-color: aliceblue;
+    width: 230px;
+    height: 250px;
+    border: 1px double gray;
+    border-radius: 20px;
+    box-shadow: 1px 3px 12px gray
+}
+
+.Service-menu ul {
+    list-style-type: none;
+    line-height: 30px;
+    padding: 20px 0px 20px 45px;
+}
+
+.Service-menu a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.Service-menu a:hover {
+    color: #eb0e0e;
+}
+
+#Choosing_Language {
+    border-style: none;
+    background-color: #304f56;
+    height: 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+#speedInput {
+    width: 99%;
+    background-color: #304f56;
+    border-radius: 4px;
+    color: white;
+}
+
+
+.speaker {
+    display: flex;
+    justify-self: center;
+    margin: 10px;
+    background-color: rgb(12, 194, 12);
+    border-style: none;
+    width: 70px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.23);
+}
+
+.speaker:hover {
+    background-color: rgb(127, 231, 127);
+}
+
+#Choosing_speak {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #304f56;
+    border-radius: 4px;
+    color: white;
+}
+
+/* quiz */
+.Quiz {
+    margin-bottom: 225px;
+}
+
+.Quiz-upload {
+    border: 1px solid rgba(128, 128, 128, 0.797);
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 3px #86b6ff43;
+    border-radius: 10px;
+}
+
+.Quiz-upload input {
+    display: flex;
+    margin-left: 10%;
+}
+
+.Choose-learning-mode {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.Choose-learning-mode button {
+    background-color: #039af2;
+    height: 30px;
+    color: #ffffff;
+    width: 80px;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.Choose-learning-mode button:hover {
+    background-color: #50b1ea;
+}
+
+#Select-mode {
+    border-radius: 10px;
+    height: 30px;
+}
+
+.Choose-learning-mode p {
+    font-size: large;
+}
+
+#display_word {
+    display: flex;
+    justify-content: center;
+    margin: 50px 100px;
+    margin-top: 0px;
+    align-items: center;
+    height: 100px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: #039af2;
+    color: white;
+    font-weight: 1000px;
+    margin-top: 40px;
+}
+
+.Learning {
+    margin-left: 30%;
+}
+
+.Learning button {
+    margin: 0px 3%;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #00d0ff;
+    color: white;
+    border-style: none;
+}
+
+.Learning button:hover {
+    background-color: #6bdef8b1;
+}
+
+.writing-answer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 40px;
+}
+
+.writing-answer input {
+    width: 300px;
+    padding: 10px;
+}
+
+.writing-answer button {
+    width: 60px;
+    border-radius: 30px;
+    background-color: #039af2;
+    color: white;
+    border-style: none;
+}
+
+.writing-answer button:hover {
+    background-color: #50b1ea;
+}
+
+#Note {
+    display: flex;
+    justify-content: center;
+    color: #eb0e0e;
+}
+
+/* Preserve Original Desktop Styles */
+.Multiple-choice {
+    flex-direction: column;
+    gap: 10px;
+    width: 200%;
+    margin-left: 115%;
+}
+
+.First-line {
+    display: flex;
+    gap: 20px;
+}
+
+.Second-line {
+    display: flex;
+    gap: 20px;
+}
+
+.Multiple-choice button {
+    width: 900px;
+    height: 70px;
+    border-style: none;
+    background-color: #00d0ff;
+}
+
+.Multiple-choice button:hover {
+    background-color: #72ddf5;
+}
+
+/* footer */
+.footer-content {
+    background-color: rgb(70, 100, 123);
+    height: 100px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 10px;
+    color: white;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    /* Header */
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .hearer-title {
+        font-size: 18px;
+    }
+
+    .header-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .header-search_box {
+        width: 90%;
+        scale: 1;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header-search_box input {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    /* Service Layout Reset */
+    .Service {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Service-menu {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .Service-menu ul {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Quiz Area Reset */
+    .Quiz {
+        margin-bottom: 50px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Quiz-upload {
+        box-sizing: border-box;
+        height: auto;
+        padding: 15px;
+    }
+
+    .Quiz-upload input {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .Choose-learning-mode {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #display_word {
+        margin: 20px 0;
+        width: 100%;
+        height: 80px;
+        font-size: 24px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Learning controls */
+    .Learning {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Learning button {
+        margin: 0;
+        width: 45%;
+        min-width: 120px;
+    }
+
+    /* Writing mode */
+    .writing-answer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .writing-answer input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .writing-answer button {
+        width: 100px;
+        height: 40px;
+    }
+
+    /* FIXED Multiple Choice Mobile */
+    .Multiple-choice {
+        width: 100%;
+        margin-left: 0;
+        /* Reset the 115% margin */
+        display: flex;
+        align-items: center;
+    }
+
+    .First-line,
+    .Second-line {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .Multiple-choice button {
+        width: 100%;
+        height: 50px;
+    }
+}
