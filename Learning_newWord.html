@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korean Learning</title>
     <link rel="stylesheet" href="./CSS_FOLDER/style_newWord.css">
-
 </head>
-
 <body>
     <div class="Header">
         <h1 class="hearer-title">
             <p id="title-first">KOREAN &nbsp;</p>
             <p id="title-last">EASY</p>
         </h1>
-        <img class="header-logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png"
-            alt="flag korean">
+        <img class="header-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" alt="flag korean">
         <div class="header-search_box">
             <input type="search" id="search-box" placeholder="Tìm kiếm hoặc dịch nghĩa của từ...">
             <button onclick="Finding()">Tìm</button>
@@ -31,11 +26,10 @@
                 <li><a href="./index.html">TRANG CHỦ</a></li>
                 <li><a href="./alphabet.html">HỌC BẢNG CHỮ CÁI</a></li>
                 <li><a href="./Learning_newWord.html">HỌC TỪ MỚI</a></li>
-                <li><a href="./Reading.html">LUYỆN ĐỌC-HIỂU</a></li>
                 <li><a href="./Listening.html">LUYỆN NGHE</a></li>
                 <li><a href="" onclick="getFile()">LẤY TÀI LIỆU TXT</a></li>
             </ul>
-            <div>
+            <div style="margin-top: 30px;">
                 <p>CHỌN NGÔN NGỮ TẠI ĐÂY</p>
                 <select style="margin: 10px 0; width: 100%;" name="Choosing_Language" id="Choosing_Language">
                     <option value="en-US" class="language">English</option>
@@ -53,42 +47,32 @@
                     <option value="Word" class="type-speak">Thuật ngữ</option>
                     <option value="Meaning" class="type-speak">Định nghĩa</option>
                 </select>
-
             </div>
         </div>
 
-
-
         <div class="Quiz">
-            <!-- Upload file -->
             <div class="Quiz-upload">
                 <p>Upload file txt chứa từ mới vào đây!</p>
                 <br>
-                <input title="File từ mới phải có dạng [thuật ngữ,định nghĩa]" type="file" id="file-upload"
-                    onchange="reloadPage(),ReadFile()" required />
+                <input title="File từ mới phải có dạng [thuật ngữ,định nghĩa]" type="file" id="file-upload" onchange="reloadPage(),ReadFile()" required />
             </div>
-            <p id="Note">Nhớ chọn bắt đầu và ấn xác nhận sau khi chọn file/ nếu muốn skip hoặc bị gặp underfined khi đã
-                thêm file thì ấn thêm một lần xác nhận</p>
-            <!-- Choose learning mode -->
+            <p id="Note">Nhớ chọn bắt đầu và ấn xác nhận sau khi chọn file</p>
+            
             <div class="Choose-learning-mode">
                 <p>Chọn chế độ học</p>
                 <select name="Select-mode" id="Select-mode">
                     <option value="Start">Bắt đầu</option>
-                    <!-- Ôn  -->
-                    <option value="Learning">Ôn tập từ vựng</option>
-                    <!-- Học ~ viết -->
+                    <option value="Table-view">Xem danh sách (Bảng)</option> <option value="Learning">Ôn tập từ vựng</option>
                     <option value="Writing">Kiểm tra viết</option>
-                    <!-- Học ~ trắc nghiệm -->
                     <option value="Multiple-choice">Kiểm tra trắc nghiệm</option>
-                    <!-- MIX -->
                     <option value="Mix-test">Mix Test</option>
                 </select>
                 <br>
                 <button onclick="ChooseMode()">Xác nhận</button>
             </div>
-            <button title="Phải chọn đúng ngôn ngữ thì đọc từ mới hoạt động" style="display: none;" class="speaker"
-                onclick="clickForSpeak()">đọc từ</button>
-            <!-- display word -->
+
+            <button title="Phải chọn đúng ngôn ngữ thì đọc từ mới hoạt động" style="display: none;" class="speaker" onclick="clickForSpeak()">đọc từ</button>
+            
             <p style="display: none;" id="display_word" onclick="Translate()">Word will appear here</p>
 
             <div style="display: none;" class="Learning">
@@ -103,6 +87,28 @@
                 </div>
             </div>
 
+            <div style="display: none;" class="Table-view">
+                <div class="Table-controls">
+                    <button onclick="toggleBlur('all', true)">Che tất cả</button>
+                    <button onclick="toggleBlur('all', false)">Hiện tất cả</button>
+                    <button onclick="toggleBlur('col1')">Che/Hiện Tiếng Việt</button>
+                    <button onclick="toggleBlur('col2')">Che/Hiện Tiếng Hàn</button>
+                </div>
+                <div class="Table-container">
+                    <table id="vocab-table">
+                        <thead>
+                            <tr>
+                                <th>Tiếng Việt (Thuật ngữ)</th>
+                                <th>Tiếng Hàn (Định nghĩa)</th>
+                                <th>Số lần gặp (Trắc nghiệm)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vocab-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
 
         <div style="display: none;" class="Multiple-choice">
@@ -114,15 +120,11 @@
                 <button id="answer-three" onclick="check_answer(this)">C</button>
                 <button id="answer-four" onclick="check_answer(this)">D</button>
             </div>
-
         </div>
 
-        <div style="display: none;" class="Mix-test">
-
-        </div>
-
+        <div style="display: none;" class="Mix-test"></div>
     </div>
-    </div>
+
     <div class="footer-content">
         <p>Email: datquangtran05@gmail.com</p>
         <a href="https://www.facebook.com/profile.php?id=100073761786683">Facebook</a>
@@ -130,5 +132,4 @@
     </div>
     <script src="JVS_FOLDER/JavaScriptforNewWord.js"></script>
 </body>
-
 </html>

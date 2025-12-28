@@ -31,13 +31,21 @@
                 <li><a href="./index.html">TRANG CHỦ</a></li>
                 <li><a href="./alphabet.html">HỌC BẢNG CHỮ CÁI</a></li>
                 <li><a href="./Learning_newWord.html">HỌC TỪ MỚI</a></li>
-                <li><a href="./Reading.html">LUYỆN ĐỌC-HIỂU</a></li>
                 <li><a href="./Listening.html">LUYỆN NGHE</a></li>
                 <li><a href="" onclick="getFile()">LẤY TÀI LIỆU TXT</a></li>
             </ul>
         </div>
         <div class="Listening-content">
-            <p class="coming-soon">COMING SOON</p>
+            <h2>LUYỆN NGHE</h2>
+            <p>Danh sách các bài nghe bên dưới. Nhấn nút play để bắt đầu.</p>
+            <div class="audio-selection-container">
+                <select id="audio-select" onchange="onAudioSelect()">
+                    <option value="" disabled selected>-- Chọn bài nghe --</option>
+                </select>
+            </div>
+
+            <div id="audio-player-container"></div>
+            <p id="no-files" style="display:none">Không tìm thấy file nghe.</p>
         </div>
     </div>
 

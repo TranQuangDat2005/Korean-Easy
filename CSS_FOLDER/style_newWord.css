@@ -446,3 +446,79 @@ body {
         height: 50px;
     }
 }
+
+/* --- STYLE CHO CHẾ ĐỘ TABLE VIEW --- */
+
+.Table-controls {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.Table-controls button {
+    padding: 8px 15px;
+    background-color: #039af2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Table-controls button:hover {
+    background-color: #50b1ea;
+}
+
+.Table-container {
+    max-height: 400px; /* Chiều cao cố định để hiện scroll */
+    overflow-y: auto;  /* Hiển thị thanh cuộn dọc */
+    border: 2px solid #304f56;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    width: 90%;
+}
+
+#vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#vocab-table th, #vocab-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#vocab-table th {
+    background-color: #304f56;
+    color: white;
+    position: sticky;
+    top: 0; /* Giữ tiêu đề khi cuộn */
+    z-index: 10;
+}
+
+#vocab-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hiệu ứng làm mờ */
+.blur-text {
+    filter: blur(5px);
+    user-select: none; /* Không cho bôi đen khi bị mờ */
+    cursor: pointer;   /* Hiển thị tay để biết có thể click */
+    transition: filter 0.3s;
+}
+
+.blur-text:hover {
+    filter: blur(3px); /* Mờ ít hơn khi di chuột vào */
+}
+
+.revealed {
+    filter: none !important;
+    cursor: default;
+}
